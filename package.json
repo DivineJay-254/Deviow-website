@@ -1,0 +1,20 @@
+{
+  "name": "prodeviow-website",
+  "version": "1.0.0",
+  "description": "PRODEVIOW - A refugee-led organization website focused on protecting, dignifying, and empowering women and girls in refugee camps",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 8000",
+    "dev": "npx http-server -p 8000 -c-1"
+  },
+  "keywords": [
+    "refugee",
+    "women empowerment",
+    "VSLA",
+    "gender-based violence",
+    "Kakuma"
+  ],
+  "author": "PRODEVIOW",
+  "license": "MIT",
+  "type": "module"
+}
