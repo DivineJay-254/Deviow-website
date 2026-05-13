@@ -475,20 +475,6 @@ section {
   gap: 0.75rem;
 }
 
-.card-grid.single-row .card {
-  padding: 1rem;
-}
-
-.card-grid.single-row h3 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-grid.single-row p {
-  font-size: 0.85rem;
-  line-height: 1.4;
-}
-
 .card {
   background-color: #fff;
   border-radius: 1.5rem;
