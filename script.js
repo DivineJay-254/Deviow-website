@@ -55,3 +55,54 @@ quickReplies.forEach((button) => {
   });
 });
 
+// Counter animation for statistics
+const animateCounter = (element, target) => {
+  let current = 0;
+  const increment = target / 60;
+  const interval = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target + (element.textContent.includes("+") ? "+" : "");
+      clearInterval(interval);
+    } else {
+      element.textContent = Math.floor(current) + (element.textContent.includes("+") ? "+" : "");
+    }
+  }, 30);
+};
+
+const observerOptions = {
+  threshold: 0.5,
+  rootMargin: "0px"
+};
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      const text = entry.target.textContent.replace(/\+/g, "");
+      const target = parseInt(text);
+      animateCounter(entry.target, target);
+      entry.target.dataset.animated = "true";
+      counterObserver.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+const statNumbers = document.querySelectorAll(".stat-number");
+statNumbers.forEach((stat) => {
+  counterObserver.observe(stat);
+});
+
+// Image slide-in animation
+const imageObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "slideIn 0.6s ease-out forwards";
+      imageObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll("img, .gallery-item, .media-card").forEach((img) => {
+  imageObserver.observe(img);
+});
+

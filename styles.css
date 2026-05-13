@@ -553,7 +553,7 @@ section {
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
@@ -562,6 +562,34 @@ section {
   border-radius: 1.25rem;
   background-color: var(--lavender-light);
   border: 1px solid var(--border);
+  text-align: center;
+}
+
+.impact-grid .stat-number {
+  animation: counter-up 2s ease-out forwards;
+  font-size: 2.5rem;
+}
+
+@keyframes counter-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .gallery-preview .gallery-grid {
