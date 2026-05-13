@@ -554,7 +554,7 @@ section {
 
 .stat-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
@@ -828,6 +828,10 @@ section {
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -840,6 +844,10 @@ section {
   }
 
   .impact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-grid {
     grid-template-columns: 1fr;
   }
 
