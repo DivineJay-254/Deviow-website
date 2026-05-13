@@ -471,8 +471,8 @@ section {
 }
 
 .card-grid.single-row {
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.75rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
 .card {
