@@ -515,8 +515,8 @@ section {
 
 .impact-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
 }
 
 .impact-grid article {
@@ -830,6 +830,10 @@ section {
   }
 
   .home-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-grid {
     grid-template-columns: 1fr;
   }
 
