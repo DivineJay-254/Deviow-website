@@ -466,6 +466,10 @@ section {
   gap: 1.5rem;
 }
 
+.card-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
 .card {
   background-color: #fff;
   border-radius: 1.5rem;
