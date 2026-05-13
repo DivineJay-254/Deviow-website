@@ -1,0 +1,34 @@
+# GitHub Pages Configuration for Jekyll
+# This file tells GitHub Pages to build the site and preserve folder structure
+
+# Theme settings
+theme: jekyll-theme-minimal
+
+# Include all files (important for clean URLs)
+include:
+  - _redirects
+  - .htaccess
+
+# Exclude files from processing
+exclude:
+  - .git
+  - .gitignore
+  - node_modules
+  - package.json
+  - pnpm-lock.yaml
+  - README.md
+  - DEPLOYMENT.md
+  - PRODUCTION_CHECKLIST.txt
+  - final_verification.sh
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:year/:month/:day/:title:output_ext
+
+# URL configuration
+url: ""
+baseurl: ""
+
+# Site settings
+title: "DEVIOW - Strong Women. No Violence."
+description: "Refugee-led organization empowering women and girls through livelihood skills, financial inclusion, and GBV prevention in Kakuma."
