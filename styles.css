@@ -90,6 +90,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 .brand {
