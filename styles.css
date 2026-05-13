@@ -470,6 +470,10 @@ section {
   grid-template-columns: 1fr;
 }
 
+.card-grid.single-row {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .card {
   background-color: #fff;
   border-radius: 1.5rem;
