@@ -822,6 +822,37 @@ section {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.footer-social .social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-social .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-social .social-links a:hover {
+  background-color: rgba(91, 49, 197, 0.2);
+  color: #fff;
+  border-color: rgba(91, 49, 197, 0.4);
+  transform: translateY(-3px);
+}
+
+.footer-social .social-links svg {
+  width: 24px;
+  height: 24px;
+}
+
 @media (max-width: 768px) {
   .footer {
     padding: 2rem clamp(1rem, 4vw, 2rem);
