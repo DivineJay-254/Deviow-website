@@ -1379,12 +1379,50 @@ section {
   margin: 0 auto;
 }
 
+.impact-intro-card {
+  max-width: 65rem;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #fff 0%, var(--lavender-light) 100%);
+  padding: 3rem;
+  border-radius: 1.5rem;
+  border: 2px solid var(--border);
+  box-shadow: 0 15px 40px rgba(91, 49, 197, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.impact-intro-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(91, 49, 197, 0.5) 100%);
+}
+
 .impact-intro .intro-lead {
   font-size: clamp(1.3rem, 3vw, 1.8rem);
   color: var(--primary);
   font-weight: 600;
   margin-bottom: 1.5rem;
   line-height: 1.5;
+}
+
+.intro-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary) 0%, rgba(91, 49, 197, 0) 100%);
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.intro-subtext {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 500;
 }
 
 .impact-intro p {
