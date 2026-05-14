@@ -1365,3 +1365,239 @@ section {
     grid-template-columns: 1fr;
   }
 }
+
+/* Impact page enhancements */
+
+.impact-intro {
+  background: linear-gradient(135deg, var(--lavender-light) 0%, rgba(91, 49, 197, 0.05) 100%);
+  padding: 4rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.impact-intro .intro-content {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+.impact-intro .intro-lead {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.impact-intro p {
+  font-size: 1.05rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.impact-metrics {
+  background-color: #fff;
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.impact-metrics .section-header {
+  margin-bottom: 3rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #fff 0%, var(--lavender-light) 100%);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  border: 2px solid var(--border);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(91, 49, 197, 0.15);
+  transform: translateY(-8px);
+}
+
+.stat-card .stat-number {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: var(--primary);
+  margin: 0 0 0.5rem 0;
+}
+
+.stat-card .stat-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.stat-card .stat-description {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.program-deep-dive {
+  background-color: var(--lavender-light);
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.program-deep-dive .section-header {
+  margin-bottom: 3rem;
+}
+
+.program-deep-dive .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.program-deep-dive .card {
+  background-color: #fff;
+  padding: 2rem;
+}
+
+.program-deep-dive .card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.program-deep-dive .card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.stories-section {
+  background-color: #fff;
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.stories-section .section-header {
+  margin-bottom: 3rem;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.story-card {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(67, 40, 105, 0.08);
+  border: 1px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.story-card:hover {
+  box-shadow: 0 25px 50px rgba(67, 40, 105, 0.15);
+  transform: translateY(-6px);
+}
+
+.story-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.story-content {
+  padding: 2rem;
+}
+
+.story-quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.story-name {
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.story-text {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.impact-process {
+  background-color: var(--lavender-light);
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.impact-process .section-header {
+  margin-bottom: 3rem;
+}
+
+.impact-cta {
+  background: linear-gradient(135deg, var(--primary) 0%, rgba(91, 49, 197, 0.8) 100%);
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+  color: #fff;
+  text-align: center;
+}
+
+.impact-cta .cta-content {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.impact-cta p.eyebrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.impact-cta h2 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.impact-cta p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.impact-cta .cta-actions {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-cta .cta-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .impact-cta .cta-actions .btn {
+    width: 100%;
+  }
+
+  .stat-card .stat-number {
+    font-size: 2rem;
+  }
+}
