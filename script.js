@@ -106,3 +106,20 @@ document.querySelectorAll("img, .gallery-item, .media-card").forEach((img) => {
   imageObserver.observe(img);
 });
 
+// Toggle explore section
+const toggleExplore = () => {
+  const content = document.getElementById("exploreContent");
+  const button = document.querySelector(".explore-toggle");
+  const icon = button.querySelector(".toggle-icon");
+  
+  if (content.style.display === "none") {
+    content.style.display = "grid";
+    icon.textContent = "−";
+    button.setAttribute("aria-expanded", "true");
+  } else {
+    content.style.display = "none";
+    icon.textContent = "+";
+    button.setAttribute("aria-expanded", "false");
+  }
+};
+

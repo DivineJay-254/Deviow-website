@@ -1602,3 +1602,105 @@ section {
     font-size: 2rem;
   }
 }
+
+/* Explore More Section */
+
+.explore-more {
+  background-color: #fff;
+  padding: 3rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.explore-toggle {
+  width: 100%;
+  background: linear-gradient(135deg, var(--lavender-light) 0%, rgba(91, 49, 197, 0.05) 100%);
+  border: 2px solid var(--border);
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.explore-toggle:hover {
+  background: linear-gradient(135deg, var(--lavender) 0%, rgba(91, 49, 197, 0.1) 100%);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.explore-toggle .toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.explore-content {
+  margin-top: 2rem;
+  animation: slideDown 0.4s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.explore-content .section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.explore-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.explore-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 12px 30px rgba(91, 49, 197, 0.1);
+  transform: translateY(-4px);
+}
+
+.explore-card h3 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+}
+
+.explore-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .explore-toggle {
+    font-size: 1rem;
+    padding: 1.25rem 1.5rem;
+  }
+
+  .explore-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
