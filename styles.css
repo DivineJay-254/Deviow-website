@@ -330,7 +330,7 @@ section {
 .home-stats,
 .gallery-preview {
   background-color: #fff;
-  padding: 2.5rem clamp(1.5rem, 5vw, 5rem);
+  padding: 1rem clamp(1.5rem, 5vw, 5rem) 2.5rem clamp(1.5rem, 5vw, 5rem);
 }
 
 .home-links .container,
@@ -1122,7 +1122,7 @@ section {
 
 .get-involved {
   background-color: #fff;
-  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+  padding: 5rem clamp(1.5rem, 5vw, 5rem) 2rem clamp(1.5rem, 5vw, 5rem);
 }
 
 .get-involved .section-header {
@@ -1148,7 +1148,7 @@ section {
 }
 
 .text-center.mt-4 {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 /* Program showcase styling */
