@@ -247,6 +247,20 @@ section {
   transform: translateY(-2px);
 }
 
+.btn.secondary {
+  background-color: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn.secondary:hover {
+  background-color: var(--lavender);
+  transform: translateY(-2px);
+  border-color: var(--primary-dark);
+  color: var(--primary-dark);
+}
+
 .btn.ghost {
   border-color: var(--primary);
   color: var(--primary);
@@ -1034,3 +1048,261 @@ section {
   gap: 1.5rem;
 }
 
+/* New sections styling */
+
+.why-matters {
+  background-color: #fff;
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.why-matters .section-header {
+  text-align: center;
+  margin: 0 auto 3rem;
+}
+
+.why-matters .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.partners {
+  background-color: var(--lavender-light);
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.partners .section-header {
+  max-width: 56rem;
+  margin-bottom: 3rem;
+}
+
+.partners .section-header p {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.partners .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.get-involved {
+  background-color: #fff;
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.get-involved .section-header {
+  max-width: 56rem;
+  margin-bottom: 3rem;
+}
+
+.get-involved .section-header p {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.get-involved .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Program showcase styling */
+.program-showcase {
+  background-color: #fff;
+  padding: 4rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.program-showcase .section-header {
+  margin-bottom: 2rem;
+}
+
+.program-showcase .two-column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.program-showcase article h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.program-showcase article p {
+  margin-bottom: 1rem;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.program-showcase article p:first-of-type {
+  color: var(--muted);
+}
+
+.program-showcase .info-list {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-top: 1.25rem;
+  color: var(--muted);
+}
+
+.program-showcase .info-list li {
+  margin-bottom: 0.5rem;
+}
+
+.program-showcase .gallery-item {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(67, 40, 105, 0.08);
+  border: 1px solid var(--border);
+}
+
+.program-showcase .gallery-item img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.program-showcase .gallery-caption {
+  padding: 1.25rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--primary);
+  background-color: #fff;
+}
+
+/* Contact page styling */
+.contact-section {
+  background-color: #fff;
+  padding: 4rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.contact-section .section-header {
+  margin-bottom: 3rem;
+}
+
+.contact-section .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.collaboration-section {
+  background-color: var(--lavender-light);
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.collaboration-section .section-header {
+  margin-bottom: 3rem;
+}
+
+.collaboration-section .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.contact-form-section {
+  background-color: #fff;
+  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.contact-form-section .section-header {
+  text-align: center;
+  max-width: 50rem;
+  margin: 0 auto 3rem;
+}
+
+.form-wrapper {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 15px 35px rgba(67, 40, 105, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  border-radius: 0.9rem;
+  border: 1px solid var(--border);
+  padding: 0.9rem 1.1rem;
+  font: inherit;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(91, 49, 197, 0.1);
+}
+
+.contact-form button {
+  margin-top: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .program-showcase .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .program-showcase article h2 {
+    font-size: 1.5rem;
+  }
+
+  .why-matters .card-grid,
+  .partners .card-grid,
+  .get-involved .card-grid,
+  .collaboration-section .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-showcase .gallery-item img {
+    height: 240px;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .program-showcase {
+    padding: 3rem clamp(1.5rem, 5vw, 5rem);
+  }
+}
