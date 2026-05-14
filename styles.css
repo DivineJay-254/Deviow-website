@@ -1306,3 +1306,19 @@ section {
     padding: 3rem clamp(1.5rem, 5vw, 5rem);
   }
 }
+
+.impact-statement {
+  max-width: 60rem;
+  margin: 3rem auto 0;
+  text-align: center;
+}
+
+.impact-statement .card {
+  border: 2px solid var(--primary);
+  background-color: var(--lavender-light);
+}
+
+.impact-statement .card h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
