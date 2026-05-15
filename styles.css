@@ -330,7 +330,11 @@ section {
 .home-stats,
 .gallery-preview {
   background-color: #fff;
-  padding: 1rem clamp(1.5rem, 5vw, 5rem) 2.5rem clamp(1.5rem, 5vw, 5rem);
+  padding: 0 clamp(1.5rem, 5vw, 5rem) 2.5rem clamp(1.5rem, 5vw, 5rem);
+}
+
+.gallery-preview .section-header {
+  margin-bottom: 1.5rem;
 }
 
 .home-links .container,
