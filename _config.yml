@@ -1,0 +1,31 @@
+# GitHub Pages Configuration
+# Disable Jekyll processing to serve static files directly
+safe: false
+lsi: false
+gist: false
+kramdown:
+  math_engine: mathjax
+  math_engine_opts: {}
+  
+# Files to include (prevent Jekyll from hiding important files)
+include:
+  - .nojekyll
+  - _redirects
+  - .htaccess
+  - styles.css
+  - script.js
+  - images
+
+# Exclude files from Jekyll processing
+exclude:
+  - .git
+  - .gitignore
+  - node_modules
+  - package.json
+  - pnpm-lock.yaml
+  - vercel.json
+  - netlify.toml
+
+# Site metadata
+title: "DEVIOW - Strong Women. No Violence."
+description: "Refugee-led organization empowering women and girls through livelihood skills, financial inclusion, and GBV prevention in Kakuma."
