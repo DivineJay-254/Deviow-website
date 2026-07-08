@@ -40,11 +40,11 @@ a {
 }
 
 section {
-  padding: 5rem clamp(1.5rem, 5vw, 5rem);
+  padding: 5rem clamp(1.5rem, 3vw, 3rem);
 }
 
 .hero {
-  padding: 4rem clamp(1.5rem, 5vw, 5rem) 4rem;
+  padding: 4rem clamp(1.5rem, 3vw, 3rem) 4rem;
   background: linear-gradient(180deg, #f9f6ff 0%, #ffffff 70%);
 }
 
@@ -64,7 +64,7 @@ section {
 }
 
 .page-content {
-  padding: 4rem clamp(1.5rem, 5vw, 5rem) 5rem;
+  padding: 4rem clamp(1.5rem, 3vw, 3rem) 5rem;
   background-color: var(--lavender-light);
 }
 
@@ -84,7 +84,7 @@ section {
   z-index: 900;
   background: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(24px) saturate(160%);
-  padding: 1.2rem clamp(1.5rem, 5vw, 5rem);
+  padding: 1.2rem clamp(1.5rem, 3vw, 3rem);
   border-bottom: 1px solid rgba(91, 49, 197, 0.1);
   box-shadow: 0 2px 8px rgba(6, 2, 14, 0.08);
   display: flex;
@@ -453,13 +453,13 @@ section {
 
 /* Impact Statement Card */
 .impact-statement-section {
-  padding: 0 clamp(1.5rem, 5vw, 5rem);
+  padding: 0 clamp(1.5rem, 3vw, 3rem);
 }
 
 .impact-statement-card {
   background: linear-gradient(135deg, #5b31c5 0%, #7d4ed8 100%);
   border-radius: 2rem;
-  padding: 4rem clamp(2rem, 5vw, 5rem);
+  padding: 4rem clamp(2rem, 3vw, 3rem);
   color: white;
   position: relative;
   overflow: hidden;
@@ -715,7 +715,7 @@ section {
 
 .impact-intro {
   background-color: var(--lavender-light);
-  padding: 3rem clamp(1.5rem, 5vw, 5rem);
+  padding: 3rem clamp(1.5rem, 3vw, 3rem);
 }
 
 .intro-content {
@@ -864,7 +864,7 @@ section {
 .footer {
   background-color: #130631;
   color: #fff;
-  padding: 2.5rem clamp(1.5rem, 5vw, 5rem);
+  padding: 2.5rem clamp(1.5rem, 3vw, 3rem);
 }
 
 .footer .container {
