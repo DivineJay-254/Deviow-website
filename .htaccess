@@ -2,6 +2,11 @@
   RewriteEngine On
   RewriteBase /
   
+  # Redirects for merged pages
+  RewriteRule ^values/?$ /about#values [R=301,L]
+  RewriteRule ^play-and-grow/?$ /programs#play-and-grow [R=301,L]
+  RewriteRule ^gallery/?$ /impact#gallery [R=301,L]
+  
   # Prevent rewriting for existing files and directories
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
