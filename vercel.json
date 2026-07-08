@@ -1,4 +1,21 @@
 {
+  "redirects": [
+    {
+      "source": "/values",
+      "destination": "/about#values",
+      "statusCode": 301
+    },
+    {
+      "source": "/play-and-grow",
+      "destination": "/programs#play-and-grow",
+      "statusCode": 301
+    },
+    {
+      "source": "/gallery",
+      "destination": "/impact#gallery",
+      "statusCode": 301
+    }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
