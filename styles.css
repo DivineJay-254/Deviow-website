@@ -1268,6 +1268,88 @@ section {
   color: var(--text);
 }
 
+/* Kids Picks Section */
+.kids-picks {
+  padding: 3rem 0;
+}
+
+.kids-picks .section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.picks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.kids-pick-card {
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.kids-pick-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #5b31c5 0%, #8b6dd8 100%);
+}
+
+.pick-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #5b31c5;
+  opacity: 0.1;
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  line-height: 1;
+}
+
+.kids-pick-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 1rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.kids-pick-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 1.5rem 0;
+}
+
+.pick-tag {
+  display: inline-block;
+  background: #f5f5f5;
+  color: #5b31c5;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kids-pick-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(91, 49, 197, 0.12);
+  border-color: #5b31c5;
+}
+
 @media (max-width: 768px) {
   .team-grid {
     grid-template-columns: 1fr;
@@ -1276,6 +1358,21 @@ section {
 
   .team-image {
     height: 250px;
+  }
+
+  .picks-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .kids-pick-card {
+    padding: 1.5rem;
+  }
+
+  .pick-number {
+    font-size: 2.5rem;
+    top: -5px;
+    right: 5px;
   }
 }
 
