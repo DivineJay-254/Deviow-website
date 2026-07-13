@@ -22,19 +22,49 @@ navAnchors.forEach((link) => {
 });
 
 const highlightActiveNav = () => {
-  const current = window.location.pathname.split("/").filter(Boolean).pop() || "index.html";
-  navAnchors.forEach((link) => {
-    const href = link.getAttribute("href");
-    if (!href) return;
-    if (href === current || (href === "index.html" && current === "")) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+  const footerLinks = document.querySelectorAll('.footer-links a');
+
+  const normalize = (href) => {
+    try {
+      const u = new URL(href, window.location.origin);
+      let p = u.pathname.replace(/\/index\.html$/, '');
+      if (p.length > 1 && p.endsWith('/')) p = p.slice(0, -1);
+      if (p === '') p = '/';
+      return { path: p, hash: u.hash || '' };
+    } catch (e) {
+      return { path: href || '', hash: '' };
     }
+  };
+
+  const current = normalize(window.location.href);
+
+  const allLinks = Array.from(navAnchors).concat(Array.from(footerLinks));
+
+  allLinks.forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    const target = normalize(href);
+
+    const samePath = target.path === current.path;
+    const isParentPath = target.path !== '/' && current.path.startsWith(target.path + '/');
+
+    if (samePath || isParentPath) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+
+    // Also update state immediately on click so users see feedback before navigation
+    link.addEventListener('click', () => {
+      allLinks.forEach((l) => l.classList.remove('active'));
+      link.classList.add('active');
+    });
   });
 };
 
 highlightActiveNav();
+
+window.addEventListener('popstate', highlightActiveNav);
+window.addEventListener('hashchange', highlightActiveNav);
 
 chatToggle?.addEventListener("click", () => {
   const isOpen = chatPanel?.classList.toggle("open");
@@ -78,11 +108,17 @@ const observerOptions = {
 const counterObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting && !entry.target.dataset.animated) {
-      const text = entry.target.textContent.replace(/\+/g, "");
-      const target = parseInt(text);
-      animateCounter(entry.target, target);
-      entry.target.dataset.animated = "true";
-      counterObserver.unobserve(entry.target);
+        const text = entry.target.textContent.replace(/\+/g, "").trim();
+        const target = parseInt(text, 10);
+        if (Number.isFinite(target)) {
+          animateCounter(entry.target, target);
+          entry.target.dataset.animated = "true";
+          counterObserver.unobserve(entry.target);
+        } else {
+          // Not a numeric stat (e.g., 'Safe spaces' or 'Community-led') — leave as-is and don't animate
+          entry.target.dataset.animated = "true";
+          counterObserver.unobserve(entry.target);
+        }
     }
   });
 }, observerOptions);
