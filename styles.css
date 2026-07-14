@@ -311,6 +311,12 @@ section {
   padding: 1.25rem;
   box-shadow: 0 25px 60px rgba(67, 40, 105, 0.1);
   max-width: 420px;
+  align-self: start;
+}
+
+.media-card img {
+  height: 280px;
+  object-fit: cover;
 }
 
 .media-badge {
